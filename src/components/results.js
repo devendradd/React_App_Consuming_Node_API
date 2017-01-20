@@ -17,8 +17,10 @@ export default class Results extends React.Component{
             };
 
             if(this.props.datatochild!=0){
-                var resultItems = this.props.datatochild.results.map((result) => {
 
+                //below resultItems will contain an array of <ResultItems key = {result.trackId} data = {item}/>  elemnts which are individually created using child component <ResultItems>
+                var resultItems = this.props.datatochild.results.map((result) => {
+                    //adding all elements to an object items so that we can access them in the child element using data directly which is written in <ResultItems key = {result.trackId} data = {item}/>
                     var item = {
                         id : result.trackId, 
                         name : result.trackName,
@@ -27,12 +29,14 @@ export default class Results extends React.Component{
                         country : result.country,
                         currency : result.currency
                     };
-
-                    return   <ResultItems key = {result.trackId} data = {item}/>
-                    //return   <ResultItems key = {result.trackId} trackName = {result.trackName} trackId = {result.trackId}/>
+                    
+                    //child element <ResultItems> 
+                    return   <ResultItems key = {result.trackId} data = {item}/> //return of call back of map() function                    
                 });
             }
         return(
+            //rendering the child component using {resultItems} which has been populated using map() function in above code.
+            //which contains the individual element of <ResultItems key = {result.trackId} data = {item}/>
             <div>
                 <h1> this is results </h1>
                 

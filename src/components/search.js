@@ -6,8 +6,8 @@ export default class Search extends React.Component{
 
     constructor(props){
         super(props);         
-        this.search = this.search.bind(this);             
-        this.state = {func : props.parent.bindParent}
+        //binding the function search with .bind 
+        this.search = this.search.bind(this);           
     }
 
     search(){
@@ -15,7 +15,8 @@ export default class Search extends React.Component{
             type: "GET",
             dataType: "jsonp",
             url: 'https://itunes.apple.com/search?term=fun',
-            success: (response)=>{                               
+            success: (response)=>{    
+                //call back property function which will call back to the bindParent() function in the parent component  at the last                         
                 this.props.parent(response)
             }
         });

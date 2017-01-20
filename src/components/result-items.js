@@ -11,7 +11,8 @@ export default class ResultItems extends React.Component{
         console.log(this.props.data)
 
     
-
+        // creating each row for the data being send from parent component(data asent is 'data' from parent component)
+        //data used in this props.data.id is coming from <ResultItems key = {result.trackId} data = {item}/> this line which is in the parent component
         return(
             <tr>
                 <td>    
