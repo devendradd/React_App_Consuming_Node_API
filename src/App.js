@@ -19,7 +19,7 @@ class App extends Component {
 
   render() {
     console.log("from render of APPS",this.state.data);
-    return (    
+    return (
       <div>
         <Search parent={this.bindParent.bind(this)}/>
         <Results datatochild={this.state.data}/>

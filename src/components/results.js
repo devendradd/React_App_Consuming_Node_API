@@ -11,7 +11,7 @@ export default class Results extends React.Component{
             //  console.log('inside render of result', this.props.datatochild);
             if(this.props.datatochild!=0){
                 var resultItems = this.props.datatochild.results.map((result) => {
-                    return   <ResultItems key = {result.trackId} trackName = {result.trackName} data = {this.props.datatochild}/> 
+                    return   <ResultItems key = {result.trackId} trackName = {result.trackName} data = {this.props.datatochild}/>
                 });
             }
         return(
@@ -19,7 +19,7 @@ export default class Results extends React.Component{
                 <h1> this is results </h1>
                 <ul>
                     {resultItems}
-                </ul>             
+                </ul>
             </div>
         );
 
