@@ -10,15 +10,29 @@ export default class ResultItems extends React.Component{
         // console.log('inside render of result-items', this.props.data)
         console.log(this.props.data)
 
-        var style = {
-                color: 'white',
-                fontSize: 200
-            };
+    
 
         return(
-            <div>
-                <li> {this.props.data.id} | {this.props.data.name} | {this.props.data.collectionPrice} | {this.props.data.country} | {this.props.data.currency} |<img src={this.props.data.artwork}/> </li>            
-            </div>
+            <tr>
+                <td>    
+                    {this.props.data.id}
+                </td>
+                <td>    
+                    {this.props.data.name}
+                </td>
+                <td>    
+                    {this.props.data.collectionPrice}
+                </td>
+                <td>    
+                    {this.props.data.country}
+                </td>
+                <td>    
+                    {this.props.data.currency}
+                </td>
+                <td>    
+                    <img src={this.props.data.artwork} />   
+                </td>
+            </tr>
         )
     }
 }

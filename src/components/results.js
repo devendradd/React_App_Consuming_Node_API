@@ -9,6 +9,12 @@ export default class Results extends React.Component{
 
     render(){
             //  console.log('inside render of result', this.props.datatochild);
+ 
+            var style = {
+                color: 'black',
+                
+                border: '1px black solid'
+            };
 
             if(this.props.datatochild!=0){
                 var resultItems = this.props.datatochild.results.map((result) => {
@@ -29,9 +35,22 @@ export default class Results extends React.Component{
         return(
             <div>
                 <h1> this is results </h1>
-                <ul>
-                    {resultItems}
-                </ul>
+                
+                <table style={style}>
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Country</th>
+                            <th>Currency</th>
+                            <th>Art Work</th>                            
+                        </tr>
+                    </thead> 
+                    <tbody>                                                               
+                        {resultItems}
+                    </tbody>                
+                </table>
             </div>
         );
 
