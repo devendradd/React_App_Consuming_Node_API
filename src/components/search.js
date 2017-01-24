@@ -1,5 +1,6 @@
 import React from 'react';
 import $ from 'jquery';
+import { InputGroup, InputGroupButton, Input, Button } from 'reactstrap';
 
 
 export default class Search extends React.Component{
@@ -24,10 +25,14 @@ export default class Search extends React.Component{
 
     render(){
         return(
-            <div>
-                <h1> this is search box</h1>
+            <div className="jumbotron">
+                <h1>Search Your Favourite ITune</h1>
                 <div>
-                    <input type="text"/>
+                    <InputGroup>
+                        <InputGroupButton><Button onClick={this.search}>I'm a button</Button></InputGroupButton>
+                        <Input />
+                    </InputGroup>
+                    
                     <select>
                         <option value = "Software"> Apps </option> 
                         <option value ="movie"> Films </option>

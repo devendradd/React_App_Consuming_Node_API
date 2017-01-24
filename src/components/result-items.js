@@ -1,4 +1,6 @@
 import React from 'react';
+import  {Button} from  'reactstrap';
+
 
 export default class ResultItems extends React.Component{
 
@@ -22,6 +24,9 @@ export default class ResultItems extends React.Component{
                     {this.props.data.name}
                 </td>
                 <td>    
+                    {this.props.data.kind}
+                </td>
+                <td>    
                     {this.props.data.collectionPrice}
                 </td>
                 <td>    
@@ -33,6 +38,10 @@ export default class ResultItems extends React.Component{
                 <td>    
                     <img src={this.props.data.artwork} />   
                 </td>
+                <td>    
+                   <Button color="danger" size="sm">Like</Button>{' '}
+                </td>
+                
             </tr>
         )
     }

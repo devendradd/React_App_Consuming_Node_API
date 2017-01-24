@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 
 // importing components
 import Search from './components/search';
@@ -24,9 +25,13 @@ class App extends Component {
   render() {
     console.log("from render of APPS",this.state.data);
     return (
-      <div>
-        <Search parent={this.bindParent.bind(this)}/>
-        <Results datatochild={this.state.data}/>
+      <div className = "container">
+       <div className="row">
+        <div className="col-xs-12">            
+          <Search parent={this.bindParent.bind(this)}/>
+          <Results datatochild={this.state.data}/>        
+        </div>
+       </div>
       </div>
     );
   }
