@@ -29,15 +29,9 @@ export default class Search extends React.Component{
                 <h1>Search Your Favourite ITune</h1>
                 <div>
                     <InputGroup>
-                        <InputGroupButton><Button onClick={this.search}>I'm a button</Button></InputGroupButton>
+                        <InputGroupButton><Button onClick={this.search}>Search</Button></InputGroupButton>
                         <Input />
-                    </InputGroup>
-                    
-                    <select>
-                        <option value = "Software"> Apps </option> 
-                        <option value ="movie"> Films </option>
-                    </select>
-                    <input type="submit" onClick={this.search}/>                    
+                    </InputGroup>                                                    
                 </div>
             </div>
         );

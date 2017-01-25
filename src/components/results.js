@@ -1,7 +1,7 @@
 
 import React from 'react';
 import ResultItems from './result-items';
-import {Table} from 'reactstrap';
+import {Table, CardDeck} from 'reactstrap';
 
 
 export default class Results extends React.Component{
@@ -13,7 +13,8 @@ export default class Results extends React.Component{
     render(){
             //  console.log('inside render of result', this.props.datatochild);
  
-        
+            
+
             if(this.props.datatochild!=0){
 
                 //below resultItems will contain an array of <ResultItems key = {result.trackId} data = {item}/>  elemnts which are individually created using child component <ResultItems>
@@ -37,27 +38,11 @@ export default class Results extends React.Component{
             //rendering the child component using {resultItems} which has been populated using map() function in above code.
             //which contains the individual element of <ResultItems key = {result.trackId} data = {item}/>
             
-            <div>
-                <h1>  </h1>
-                
-                <Table>
-                    <thead>
-                        <tr>
-                            <th>Id</th>
-                            <th>Name</th>
-                            <th>kind</th>
-                            <th>Price</th>
-                            <th>Country</th>
-                            <th>Currency</th>
-                            <th>Art Work</th>   
-                            <th>Add to Cart</th>                         
-                        </tr>
-                    </thead> 
-                    <tbody>                                                               
-                        {resultItems}
-                    </tbody>                
-                </Table>                 
-            </div>
+           
+                 <CardDeck>                   
+                    {resultItems}
+                </CardDeck>             
+           
         );
 
     }

@@ -1,0 +1,48 @@
+this is in results
+<Table>
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>kind</th>
+                            <th>Price</th>
+                            <th>Country</th>
+                            <th>Currency</th>
+                            <th>Art Work</th>   
+                            <th>Add to Cart</th>                         
+                        </tr>
+                    </thead> 
+                    <tbody>                                                               
+                        {resultItems}
+                    </tbody>                
+                </Table>      
+
+
+
+This is in result-items
+<tr>
+                    <td>    
+                        {this.props.data.id}
+                    </td>
+                    <td>    
+                        {this.props.data.name}
+                    </td>
+                    <td>    
+                        {this.props.data.kind}
+                    </td>
+                    <td>    
+                        {this.props.data.collectionPrice}
+                    </td>
+                    <td>    
+                        {this.props.data.country}
+                    </td>
+                    <td>    
+                        {this.props.data.currency}
+                    </td>
+                    <td>    
+                        <img src={this.props.data.artwork} />   
+                    </td>
+                    <td>    
+                    <Button color="danger" size="sm">Like</Button>{' '}
+                    </td>                
+                </tr>

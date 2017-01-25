@@ -26,13 +26,11 @@ class App extends Component {
     console.log("from render of APPS",this.state.data);
     return (
       <div className = "container">
-       <div className="row">
-        <div className="col-xs-12">            
+                
           <Search parent={this.bindParent.bind(this)}/>
           <Results datatochild={this.state.data}/>        
         </div>
-       </div>
-      </div>
+     
     );
   }
 }
