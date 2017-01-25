@@ -15,7 +15,7 @@ export default class ResultItems extends React.Component{
         console.log(this.props.data)
 
         
-        var style = {
+        var custom_card = {
             float: 'left',
             height: '400px',
             width: '265px',
@@ -28,7 +28,7 @@ export default class ResultItems extends React.Component{
         //data used in this props.data.id is coming from <ResultItems key = {result.trackId} data = {item}/> this line which is in the parent component
         return(
            
-        <Card inverse style={style} className="jumbotron" >
+        <Card inverse style={custom_card} className="jumbotron" >
             <Row>
                 <Col xs="12" style={{height: '30px'}}>
                     <CardImg top width="20%" src={this.props.data.artwork} alt="Card image cap" />   

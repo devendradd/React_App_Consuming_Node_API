@@ -1,6 +1,6 @@
 import React from 'react';
 import $ from 'jquery';
-import { InputGroup, InputGroupButton, Input, Button } from 'reactstrap';
+import { InputGroup, InputGroupButton, Input, Button, Badge } from 'reactstrap';
 
 
 export default class Search extends React.Component{
@@ -26,12 +26,14 @@ export default class Search extends React.Component{
     render(){
         return(
             <div className="jumbotron">
-                <h1>Search Your Favourite ITune</h1>
+                <h2><b>Search Your Favourite ITune</b></h2>
                 <div>
                     <InputGroup>
                         <InputGroupButton><Button onClick={this.search}>Search</Button></InputGroupButton>
-                        <Input />
-                    </InputGroup>                                                    
+                        <Input />                        
+                    </InputGroup>
+                    <h3>Likes <Badge color="info">New</Badge></h3>
+                    <br/>                                                                                    
                 </div>
             </div>
         );

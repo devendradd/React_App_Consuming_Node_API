@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 
 // importing components
 import Search from './components/search';
 import Results from './components/results';
+import NavBar from './components/navigation'
 
 class App extends Component {
   constructor(){
@@ -23,12 +25,17 @@ class App extends Component {
   }
 
   render() {
+
+    var divStyle={
+      backgroun: '#MMMMMM'
+    };
+
     console.log("from render of APPS",this.state.data);
     return (
-      <div className = "container">
-                
-          <Search parent={this.bindParent.bind(this)}/>
-          <Results datatochild={this.state.data}/>        
+        <div className = "container">
+          <NavBar/>
+          <Search parent={this.bindParent.bind(this)}/>      
+            <Results datatochild={this.state.data}/>                  
         </div>
      
     );
